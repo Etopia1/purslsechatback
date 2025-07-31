@@ -14,7 +14,7 @@ import { app, server } from "./src/Database/socket.js"
 
 dotenv.config()
 
-const Port = process.env.Port
+const PORT = process.env.PORT || 5000;
 const __dirname = path.resolve();
 
 // const app = express()
@@ -61,7 +61,7 @@ app.use((err, req, res, next) => {
     })
 })
 
-server.listen(Port, () => {
-    console.log("server is running on PORT:  👋👋👋👋👋👋💓" + Port)
+server.listen(PORT, () => {
+    console.log("server is running on PORT:  👋👋👋👋👋👋💓" + PORT)
     connectDB()
 })
