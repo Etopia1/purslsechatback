@@ -18,11 +18,13 @@ const Port = process.env.Port
 const __dirname = path.resolve();
 
 // const app = express()
-app.use(cors({
-    origin: "https://purlse-chat-front.vercel.app/",
-    credentials: true
-}))
 
+const allowedOrigin = 'https://purlse-chat-front.vercel.app'; // 🚫 no slash at end
+
+app.use(cors({
+  origin: allowedOrigin,
+  credentials: true // if using cookies or authentication
+}));
 
 
 app.use(express.json())
