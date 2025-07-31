@@ -19,7 +19,7 @@ const __dirname = path.resolve();
 
 // const app = express()
 app.use(cors({
-    origin: "https://purlse-chat-front.vercel.app",
+    origin: "https://purlse-chat-front.vercel.app/",
     credentials: true
 }))
 
